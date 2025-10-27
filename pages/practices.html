@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практики - Семестровая работа</title>
+    <link rel="stylesheet" href="../style/styles.css">
+    <style>
+        .practices-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .practice-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e9ecef;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .practice-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .practice-title {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        .practice-desc {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .practice-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .practice-link {
+            display: inline-block;
+            background: #2c3e50;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        .practice-link:hover {
+            background: #34495e;
+        }
+
+        .practice-status {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-left: 1rem;
+        }
+
+        .status-completed {
+            background: #27ae60;
+            color: white;
+        }
+
+        .status-in-progress {
+            background: #f39c12;
+            color: white;
+        }
+
+        .status-planned {
+            background: #95a5a6;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <header class="header">
+            <h1>Портфолио студента</h1>
+        </header>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
+                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <h1 class="section-title">Практические работы</h1>
+            <p>Здесь представлены практические работы, выполненные в ходе изучения фронтенд и бэкенд разработки.</p>
+            
+            <div class="practices-grid">
+                <article class="practice-card">
+                    <h2 class="practice-title">
+                        Лендинг портфолио
+                        <span class="practice-status status-completed">Завершено</span>
+                    </h2>
+                    <p class="practice-desc">Создание адаптивного лендинга портфолио с использованием HTML5, CSS3 и JavaScript. Включает главную страницу, разделы с информацией и контактную форму.</p>
+                    <div class="practice-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <a href="../index.html" class="practice-link">Посмотреть работу</a>
+                </article>
+
+                <article class="practice-card">
+                    <h2 class="practice-title">
+                        Модальное окно обратной связи
+                        <span class="practice-status status-completed">Завершено</span>
+                    </h2>
+                    <p class="practice-desc">Реализация интерактивного модального окна для формы обратной связи с валидацией полей и обработкой событий.</p>
+                    <div class="practice-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Dialog API</span>
+                    </div>
+                    <a href="contacts.html" class="practice-link">Посмотреть работу</a>
+                </article>
+
+                <article class="practice-card">
+                    <h2 class="practice-title">
+                        Каталог товаров
+                        <span class="practice-status status-completed">Завершено</span>
+                    </h2>
+                    <p class="practice-desc">Разработка сетки товаров с карточками продукции, адаптивной версткой и семантической разметкой.</p>
+                    <div class="practice-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS Grid</span>
+                        <span class="tech-tag">Flexbox</span>
+                    </div>
+                    <a href="goods.html" class="practice-link">Посмотреть работу</a>
+                </article>
+
+                <article class="practice-card">
+                    <h2 class="practice-title">
+                        Новостная лента
+                        <span class="practice-status status-completed">Завершено</span>
+                    </h2>
+                    <p class="practice-desc">Создание блока новостей с карточками статей, мета-информацией и структурным оформлением контента.</p>
+                    <div class="practice-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">Семантика</span>
+                    </div>
+                    <a href="news.html" class="practice-link">Посмотреть работу</a>
+                </article>
+
+                <article class="practice-card">
+                    <h2 class="practice-title">
+                        Бэкенд API для портфолио
+                        <span class="practice-status status-in-progress">В процессе</span>
+                    </h2>
+                    <p class="practice-desc">Разработка серверной части для обработки форм обратной связи и хранения данных портфолио.</p>
+                    <div class="practice-tech">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">MongoDB</span>
+                    </div>
+                    <a href="#" class="practice-link">Скоро будет</a>
+                </article>
+
+                <article class="practice-card">
+                    <h2 class="practice-title">
+                        Адаптивная навигация
+                        <span class="practice-status status-completed">Завершено</span>
+                    </h2>
+                    <p class="practice-desc">Создание адаптивного меню навигации, которое корректно отображается на всех типах устройств.</p>
+                    <div class="practice-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">Media Queries</span>
+                    </div>
+                    <a href="../index.html" class="practice-link">Посмотреть работу</a>
+                </article>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>© 2025 Семестровая работа по фронтенд и бэкенд разработке</p>
+            <p>Иванов Артем ???вович, ЭФБО-18-24</p>
+        </footer>
+    </div>
+</body>
+</html>
